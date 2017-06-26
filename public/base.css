@@ -1,0 +1,129 @@
+:root {
+    /* Polar Night
+     * From Dark to light
+     * */
+  --nord0: #2E3440;
+  --nord1: #3B4252;
+  --nord2: #434C5E;
+  --nord3: #4C566A;
+
+  /* Snow Storn
+   * From Dark to Light
+   * */
+  --nord4: #D8DEE9;
+  --nord5: #E5E9F0;
+  --nord6: #ECEFF4;
+
+  /* Frost
+   * Green Bluish Light Blue, Dark Blue
+   * */
+  --nord7: #8FBCBB;
+  --nord8: #88C0D0;
+  --nord9: #81A1C1;
+  --nord10: #5E81AC;
+
+  /* Aurora
+   * REd Orange Yellow Green Purple
+   * */
+  --nord11: #BF616A;
+  --nord12: #D08770;
+  --nord13: #EBCB8B;
+  --nord14: #A3BE8C;
+  --nord15: #B48EAD;
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--nord0);
+    color: var(--nord5);
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    padding: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--nord9);
+}
+a:hover {
+    color: var(--nord10)
+}
+
+.logo {
+    color: var(--nord6);
+    width: min-content;
+    margin: auto ;
+    font-size: 1.5em;
+    line-height: 0.9;
+}
+.logo-up {
+    transform: translateX(52%);
+}
+.logo-down {
+    transform: rotate(180deg) translateX(52%);
+}
+
+.bg {
+    position: absolute;
+    right:0;
+    top: 200px;
+    z-index: -1;
+    overflow: hidden;
+    width: 400px;
+}
+.bg-image {
+    width: 100%;
+}
+
+
+.wrapper {
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+    max-width: 600px;
+}
+@media (max-width: 1200px) {
+    .wrapper {
+        margin-left: 150px;
+        max-width: 500px;
+    }
+}
+@media (max-width: 960px) {
+    .wrapper {
+        margin-left: 100px;
+    }
+    .bg {
+        right: -100px;
+    }
+}
+@media (max-width: 600px) {
+    .wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.hidden-inline {
+    display: none;
+}
+.hidden-block {
+    display: none;
+}
+
+.sig {
+    width: 50%;
+}
+
+.signature {
+    color: var(--nord4)
+}
