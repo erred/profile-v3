@@ -22,16 +22,17 @@
                 <img class="bg-image" src="http://via.placeholder.com/800x1000">
             </div>
             <div class="wrapper">
-                <div class="title"><h1>Hello</h1></div>
-                <div class="tagline"><h2>Or Just a Scream into a void</h2></div>
+                <div class="title"><h1>hello, world</h1></div>
+                <div class="tagline"><h3>Or please wait while this site is under construction</h3></div>
                 <div class="content">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in interdum justo. Donec convallis rhoncus auctor. Pellentesque metus tellus, iaculis non ultrices eu, vehicula fermentum turpis.<a href="#"> more</a>
-                        <span class="hidden-inline">
+                        The following is a quote from George Santayana: <em>"I have imagination, and nothing that is real is alien to me."</em>
+                        <span id="hidden1" class="hidden">
                             Vivamus lobortis tortor velit, vitae cursus justo posuere quis. Nulla nulla risus, convallis sed turpis eget, vehicula molestie purus. Curabitur eget arcu vel dui interdum consequat. Ut elementum ligula id erat lacinia euismod. Quisque ac tristique mauris.
                         </span>
+                        <a href="#" onclick="showMore(this); return false;"> more</a>
                     </p>
-                    <div class="hidden-block">
+                    <div id="hidden2" class="hidden">
                         <p>
                             Morbi <a>dictum</a> congue velit, ut facilisis eros convallis sit amet. Vivamus in suscipit nunc. Aliquam erat volutpat. Sed scelerisque eget purus vulputate commodo. Aenean sollicitudin nisi ac pharetra condimentum. Integer augue lorem, mattis in feugiat id, eleifend a augue. Proin accumsan, tellus et vehicula pulvinar, nisl ligula interdum dolor, non ultrices orci neque congue mauris. Phasellus vel tempor leo, et lacinia mauris. Etiam lobortis ipsum dui, a fringilla sem hendrerit sed. Sed eu sapien a sem blandit consequat sit amet et lectus. Nulla sed condimentum elit. Phasellus rutrum arcu ut dolor suscipit fringilla. Cras mi velit, mollis quis aliquet id, vulputate in odio.
                         </p>
@@ -56,5 +57,32 @@
                 </div>
             </div>
         </main>
+        <script>
+            function showMore(a) {
+                e = document.getElementById("hidden1");
+                e.style.display = "inline";
+                e.style.visibility = "visible";
+
+                e = document.getElementById("hidden2");
+                e.style.position = "absolute";
+                e.style.display = "block";
+                target_height = window.getComputedStyle(e).height.replace('px', '').replace('%', '');
+                console.log(target_height);
+                e.style.maxHeight = 0;
+                e.style.position = "relative";
+                e.style.visibility = "visible";
+                e.style['transition'] = "all 0.5s linear";
+                setTimeout(function() {
+                    e.style.maxHeight = target_height + "px";
+                }, 10);
+
+                setTimeout(function() {
+                    e.style['transition'] = "all 5s linear";
+                    e.style["maxHeight"] = "none";
+                }, 600);
+
+                a.remove();
+            }
+        </script>
     </body>
 </html>

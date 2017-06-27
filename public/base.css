@@ -1,36 +1,27 @@
 :root {
-    /* Polar Night
-     * From Dark to light
-     * */
+    /* Polar Night */
   --nord0: #2E3440;
   --nord1: #3B4252;
   --nord2: #434C5E;
   --nord3: #4C566A;
 
-  /* Snow Storn
-   * From Dark to Light
-   * */
+  /* Snow Storn */
   --nord4: #D8DEE9;
   --nord5: #E5E9F0;
   --nord6: #ECEFF4;
 
-  /* Frost
-   * Green Bluish Light Blue, Dark Blue
-   * */
+  /* Frost */
   --nord7: #8FBCBB;
   --nord8: #88C0D0;
   --nord9: #81A1C1;
   --nord10: #5E81AC;
 
-  /* Aurora
-   * REd Orange Yellow Green Purple
-   * */
+  /* Aurora */
   --nord11: #BF616A;
   --nord12: #D08770;
   --nord13: #EBCB8B;
   --nord14: #A3BE8C;
   --nord15: #B48EAD;
-
 }
 
 * {
@@ -85,7 +76,6 @@ a:hover {
     width: 100%;
 }
 
-
 .wrapper {
     margin-top: 200px;
     margin-bottom: 150px;
@@ -117,17 +107,15 @@ a:hover {
     }
 }
 
-.hidden-inline {
+.hidden {
+    visibility: hidden;
     display: none;
-}
-.hidden-block {
-    display: none;
+    overflow-y: hidden;
 }
 
 .sig {
     width: 50%;
 }
-
 .signature {
     color: var(--nord4)
 }
