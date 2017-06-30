@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Sean Liao</title>
-
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
 
-        <link rel="stylesheet" href="base.css">
-        <style>
+        <!-- fullscreen when added to homescreen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <!-- url -->
+        <link rel="canonical" href="https://arccy.io">
+        <meta property="og:url" content="https://arccy.io">
+
+        <!-- title -->
+        <title>Sean Liao</title>
+        <meta property="og:title"   content="Sean Liao">
+        <meta name="twitter:title"  content="Sean Liao">
+
+        <!-- keywords -->
+        <meta name="keywords" content="Sean Liao, arccy, seanliao96, developer, designer, go, golang, photography">
+
+        <!-- name -->
+        <meta itemprop="name"           content="arccy.io">
+        <meta property="og:site_name"   content="arccy.io">
+
+        <!-- image -->
+        <meta property="og:image"   content="https://arccy.io/favicon-192x192.png">
+        <meta itemprop="image"      content="https://arccy.io/favicon-192x192.png">
+        <meta name="twitter:image"  content="https://arccy.io/favicon-192x192.png">
+
+        <!-- description -->
+        <meta name="description"            content="Hi, I'm Sean Liao, or arccy, developer & designer willing to do anything fun">
+        <meta name="twitter:description"    content="Hi, I'm Sean Liao, or arccy, developer & designer willing to do anything fun">
+        <meta property="og:description"     content="Hi, I'm Sean Liao, or arccy, developer & designer willing to do anything fun">
+        <meta itemprop="description"        content="Hi, I'm Sean Liao, or arccy, developer & designer willing to do anything fun">
+
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary">
+
+        <!-- theme -->
+        <meta name="theme-color"                content="#2E3440">
+        <meta name="msapplication-TileColor"    content="#2E3440">
+
+        <!-- icons -->
+        <link rel="icon" type="image/png"       href="/touch-icon-192x192.png">
+        <link rel="apple-touch-icon"            href="/apple-touch-icon-180x180.png">
+
+        <link rel="manifest" href="/manifest.json">
+
+        <link rel="stylesheet" href="/base.css">
+<style>
 main { height: 100vh; padding: 16px; }
 a { text-decoration: none; color: var(--nord9); }
 a:hover { color: var(--nord10); }
@@ -28,7 +70,7 @@ a:hover { color: var(--nord10); }
     .bg { right: -100px; } }
 @media (max-width: 600px) {
     .wrapper { margin-left: auto; margin-right: auto; } }
-        </style>
+</style>
     </head>
     <body>
         <main>
@@ -89,17 +131,16 @@ a:hover { color: var(--nord10); }
                 e.style.position = "absolute";
                 e.style.display = "block";
                 target_height = window.getComputedStyle(e).height.replace('px', '').replace('%', '');
-                console.log(target_height);
                 e.style.maxHeight = 0;
                 e.style.position = "relative";
                 e.style.visibility = "visible";
-                e.style['transition'] = "all 0.5s linear";
+                e.style['transition'] = "all 0.4s linear";
                 setTimeout(function() {
                     e.style.maxHeight = target_height + "px";
                 }, 10);
 
                 setTimeout(function() {
-                    e.style['transition'] = "all 5s linear";
+                    e.style['transition'] = "all 0s linear";
                     e.style["maxHeight"] = "none";
                 }, 600);
 
