@@ -53,14 +53,17 @@
         <style>
             main { height: 100vh; padding: 16px; }
             .logo { color: var(--nord6); width: min-content; margin: auto; font-size: 1.5em; line-height: 0.9; }
+            .logo a { color: inherit; }
             .logo-up { transform: translateX(52%); }
             .logo-down { transform: rotate(180deg) translateX(52%); }
             .bg {position: absolute; right:0; top: 100px; z-index: -1; overflow: hidden; width: 600px; }
             .bg-image { width: 100%; }
             .wrapper { margin-top: 200px; margin-bottom: 150px; margin-left: 200px; max-width: 600px; }
             .hidden { visibility: hidden; display: none; overflow-y: hidden; }
-            .sig { width: 50%; }
-            .signature { color: var(--nord4); }
+            #hidden2 { margin-top: -20px;}
+            #tldr { margin-top: -20px; margin-bottom: 20px;}
+            #sig { width: 50%; }
+            #signature { color: var(--nord4); }
             @media (max-width: 1200px) {
                 .wrapper { margin-left: 150px; max-width: 500px; }
                 .bg { top: 200px; width: 400px; } }
@@ -74,47 +77,63 @@
     <body>
         <main>
             <div class="logo">
-                <div class="logo-up">
-                    Sean
-                </div>
-                <div class="logo-down">
-                    Liao
-                </div>
+                <a href="/">
+                    <div class="logo-up">
+                        Sean
+                    </div>
+                    <div class="logo-down">
+                        Liao
+                    </div>
+                </a>
             </div>
             <div class="bg">
                 <img class="bg-image" src="http://via.placeholder.com/800x1000">
             </div>
             <div class="wrapper">
-                <div class="title"><h1>hello, world</h1></div>
-                <div class="tagline"><h3>Or please wait while this site is under construction</h3></div>
+                <div id="title"><h1>Hello there</h1></div>
+                <div id="tagline"><h3>You're probably here for <a href="/graphs/">pretty graphs</a> and <a href="/about/">here</a> is this page with less words</h3></div>
                 <div class="content">
                     <p>
                         The following is a quote from George Santayana: <em>"I have imagination, and nothing that is real is alien to me."</em>
                         <span id="hidden1" class="hidden">
-                            Vivamus lobortis tortor velit, vitae cursus justo posuere quis. Nulla nulla risus, convallis sed turpis eget, vehicula molestie purus. Curabitur eget arcu vel dui interdum consequat. Ut elementum ligula id erat lacinia euismod. Quisque ac tristique mauris.
+                            To make that work, I spend a not insignificant portion of my time imagining things. I also spend an even greater part of my time trying to make those dreams a reality. So what are these thoughts that occupy so much of my time? Mostly just problems and inconveniences in my life and just sometimes, those of other people.
                         </span>
                         <a href="#" onclick="showMore(this); return false;"> more</a>
                     </p>
                     <div id="hidden2" class="hidden">
                         <p>
-                            Morbi <a>dictum</a> congue velit, ut facilisis eros convallis sit amet. Vivamus in suscipit nunc. Aliquam erat volutpat. Sed scelerisque eget purus vulputate commodo. Aenean sollicitudin nisi ac pharetra condimentum. Integer augue lorem, mattis in feugiat id, eleifend a augue. Proin accumsan, tellus et vehicula pulvinar, nisl ligula interdum dolor, non ultrices orci neque congue mauris. Phasellus vel tempor leo, et lacinia mauris. Etiam lobortis ipsum dui, a fringilla sem hendrerit sed. Sed eu sapien a sem blandit consequat sit amet et lectus. Nulla sed condimentum elit. Phasellus rutrum arcu ut dolor suscipit fringilla. Cras mi velit, mollis quis aliquet id, vulputate in odio.
+                            The ancient Greeks believed that a good citizen was a well-rounded individual. While I don't live in ancient Greece, I still think it is a good idea, especially with the recent emphasis on the benefits of cross-disciplinary practices. I find a simple (perhaps oversimplified) way of thinking about it is a spectrum ranging from the liberal arts to the sciences.
                         </p>
 
                         <p>
-                            Donec nec consectetur sem, quis porttitor velit. Nulla erat nisl, luctus at tellus nec, suscipit porttitor enim. Morbi at nulla sed lacus mollis mattis ut sit amet dolor. Donec at dolor nec ipsum sodales rutrum luctus id diam. Nulla commodo dui est, eu efficitur lorem interdum sed. In libero eros, consequat nec ornare sed, vulputate ut sem. Aenean ultricies, ipsum rutrum consequat pellentesque, neque justo rhoncus neque, nec convallis orci ex at erat. Proin non ligula sit amet nisi dictum fermentum sit amet blandit ipsum. Quisque a nisl ac nisl molestie imperdiet vitae et enim. Aliquam erat volutpat. Aenean rutrum sagittis hendrerit. Praesent congue sapien in lacus molestie, eget facilisis nisi condimentum. Integer et eros ultricies, ultricies tortor quis, ultrices augue. Vestibulum et pulvinar massa, in aliquam diam. Donec faucibus, urna sed tempus placerat, odio lacus pharetra urna, et feugiat orci arcu a est. Suspendisse posuere bibendum felis, ac facilisis nisi laoreet ut.
+                            I still haven't said what I do, maybe you think this is a waste of time, maybe you should have clicked <a href="/about/">that link</a> that promised less words. So here it is: I make shiny, glowing rocks do what people want it to do. Put more plainly, I work with <em>computers</em>, mostly as a <strong>software <a href="https://github.com/arccy">developer</a></strong> with a preference for using Go, but I'll use whatever is appropriate for the job (shell scripts, python, C/C++, SQL, javascript, etc..).
                         </p>
 
                         <p>
-                            Donec a congue erat, vitae fermentum massa. Fusce id lorem a leo commodo sodales eleifend sed ex. Maecenas a mollis ante. Maecenas at placerat neque. In suscipit dui est, sed porta arcu malesuada vitae. Cras orci sem, ultrices ut varius ac, hendrerit sit amet nisl. Maecenas porttitor, neque id vestibulum interdum, dui libero posuere quam, ut aliquet mauris lacus vel tortor. Nam tincidunt ipsum et sapien tempus porttitor. Aliquam lacus diam, pretium ac turpis nec, suscipit sollicitudin elit. Vestibulum eget lacus in quam fermentum luctus gravida vitae orci. Nullam non porttitor dui. Nam egestas blandit sapien et sodales. Nulla sed risus nisi.
+                            Somewhere further towards the arts is the <strong>designer</strong> in me. Not just someone who makes things pretty, thats the <em>artist</em>, the designer is someone who asks the right questions before creating the solution. This lends itself to UI/UX, some people might even call this Design Thinking &trade;, but that's just a marketing term for something that good designers should already be doing.
                         </p>
 
                         <p>
-                            In volutpat nulla at congue convallis. Maecenas auctor diam non quam tincidunt, vel mattis orci placerat. Nulla commodo sapien quis bibendum porttitor. Praesent eu dolor congue, convallis felis non, consectetur est. Mauris congue enim ac felis convallis, et lacinia magna lacinia. Aenean condimentum placerat nibh, non congue elit imperdiet nec. Sed in tortor malesuada felis congue tempus vel quis mauris. In faucibus sollicitudin volutpat. In lacinia nisi sed dui ultrices, ut elementum mauris gravida. Praesent pulvinar turpis nibh.
+                            The remainder of my time is spent somewhat relaxing the left half of my brain (as if I can turn off my right hand), and channelling my inner Picasso. Okay, maybe not on that level, and maybe not even in painting. I draw, design websites, as a <strong>photographer</strong> I take photos both as a hobby and a job and I've worked as both <strong>lighting and sound technicians</strong> in mid-sized venues.
+                        </p>
+
+                        <p>
+                            So with all that said, I hope you don't feel that it has been a complete waste of your time and I hope you enjoy the rest of the <a href="/graphs/">site</a>.
+                        </p>
+                        <p>
+                            Interested in working with me?
+                            <ul>
+                                <li><a href="/cv/">cv</a></li>
+                                <li><a href="mailto:seanliao96@gmail.com">email</a></li>
+                            </ul>
                         </p>
                     </div>
                     <br>
-                    <div class="signature">
-                        <img class="sig" src="http://via.placeholder.com/500x200">
+                    <div id="tldr">
+                        <strong>tl;dr: </strong>I'm a: Software Developer, Designer, sometimes artist and photographer
+                    </div>
+                    <div id="signature">
+                        <img id="sig" src="http://via.placeholder.com/500x200">
                         <p>Sean Liao</p>
                     </div>
                 </div>

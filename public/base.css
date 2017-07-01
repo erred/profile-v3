@@ -39,8 +39,8 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--nord9);
+    color: var(--nord8);
 }
 a:hover {
-    color: var(--nord10);
+    color: var(--nord9);
 }
