@@ -1,6 +1,9 @@
 {
   "hosting": {
     "public": "public",
+    "ignore": [
+        "**/law-all/**"
+    ],
     "cleanUrls": true
   }
 }
