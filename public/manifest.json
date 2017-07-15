@@ -1,0 +1,19 @@
+{
+    "name": "Sean Liao",
+    "short_name": "Sean Liao",
+    "description": "more than you ever want to know about me",
+
+    "display": "standalone",
+    "start_url": "/index.html",
+    "background_color": "#222",
+    "theme_color": "#000",
+    "icons": [{
+        "src": "/icon.png",
+        "sizes": "128x128"
+    }],
+    "serviceworker": {
+        "src": "sw.js",
+        "scope": "",
+        "use_cache": true
+    }
+}
