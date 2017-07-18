@@ -1,28 +1,34 @@
 :root {
     /* Polar Night */
-  --nord0: #2E3440;
-  --nord1: #3B4252;
-  --nord2: #434C5E;
-  --nord3: #4C566A;
+    --nord0: #2E3440;
+    --nord1: #3B4252;
+    --nord2: #434C5E;
+    --nord3: #4C566A;
 
-  /* Snow Storn */
-  --nord4: #D8DEE9;
-  --nord5: #E5E9F0;
-  --nord6: #ECEFF4;
+    /* Snow Storn */
+    --nord4: #D8DEE9;
+    --nord5: #E5E9F0;
+    --nord6: #ECEFF4;
 
-  /* Frost */
-  --nord7: #8FBCBB;
-  --nord8: #88C0D0;
-  --nord9: #81A1C1;
-  --nord10: #5E81AC;
+    /* Frost */
+    --nord7: #8FBCBB;
+    --nord8: #88C0D0;
+    --nord9: #81A1C1;
+    --nord10: #5E81AC;
 
-  /* Aurora */
-  --nord11: #BF616A;
-  --nord12: #D08770;
-  --nord13: #EBCB8B;
-  --nord14: #A3BE8C;
-  --nord15: #B48EAD;
+    /* Aurora */
+    --nord11: #BF616A;
+    --nord12: #D08770;
+    --nord13: #EBCB8B;
+    --nord14: #A3BE8C;
+    --nord15: #B48EAD;
+
+    /* fonts */
+    --title: 'Space Mono', monospace;
+    --body: 'Raleway', sans-serif;
 }
+
+/* -==================== Baisic stuff ==================== */
 
 * {
     box-sizing: inherit;
@@ -37,10 +43,63 @@ body {
     padding: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 16px;
+    font-size: 24px;
+}
+
+.logo {
+    color: var(--nord6);
+    width: min-content;
+    font-size: 1.5em;
+    line-height: 0.9;
+    font-family: var(--title);
+}
+
+.logo a {
+    color: inherit;
+}
+.logo-up {
+    transform: translateX(52%);
+}
+.logo-down {
+    transform: rotate(180deg) translateX(52%);
+}
+
+.wrapper {
+    width: 96%;
+    max-width: 840px;
+    font-family: var(--body);
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 660px;
+    }
+}
+
+.navTitle {
+    display: inline-block;
+    line-height: 0.3;
+    font-family: var(--title);
+color: var(--nord6)}
+
+.navTitle a {
+    color: inherit;
+    text-decoration: underline;
+    color: inherit;
+}
+
 a {
     text-decoration: none;
     color: var(--nord8);
 }
+
 a:hover {
     color: var(--nord9);
 }
+
