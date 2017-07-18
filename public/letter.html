@@ -7,9 +7,6 @@
         <link rel="icon" type="image/png" href="/touch-icon-192x192.png">
         <meta name="theme-color" content="#2E3440">
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-
         <title>Sean Liao</title>
         <link rel="canonical" href="https://arccy.io">
         <meta itemprop="image" content="https://arccy.io/favicon-192x192.png">
@@ -17,6 +14,14 @@
 
         <link href="https://fonts.googleapis.com/css?family=Space+Mono|Raleway" rel="stylesheet">
         <link rel="stylesheet" href="/base.css">
+
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script async src="/sw-register.js"></script>
         <style>
             .bg {position: absolute; right:0; top: 100px; z-index: -1; overflow: hidden; width: 600px; }
             .bg-image { width: 100%; }
@@ -30,81 +35,78 @@
         </style>
     </head>
     <body>
-        <main>
-            <div class="logo">
-                <a href="/">
-                    <div class="logo-up">
-                        Sean
-                    </div>
-                    <div class="logo-down">
-                        Liao
-                    </div>
-                </a>
-            </div>
-            <div class="bg">
-                <img class="bg-image" src="http://via.placeholder.com/800x1000">
-            </div>
-            <div class="wrapper">
-                <div class="offset">
-                    <div>
-                        <h3 class="navTitle"><a href="/">home</a></h3>
-                        <span class="navTitle"> &raquo </span>
-                        <h1 class="navTitle">Hello</h1>
-                    </div>
-                    <div id="tagline"><h3>You're probably here for <a href="/graphs/">pretty graphs</a> and <a href="/about/">here</a> is this page with less words</h3></div>
-                    <div class="content">
-                        <p>
-                            The following is a quote from George Santayana: <em>"I have imagination, and nothing that is real is alien to me."</em>
-                            <span id="hidden1" class="hidden">
-                                To make that work, I spend a not insignificant portion of my time imagining things. I also spend an even greater part of my time trying to make those dreams a reality. So what are these thoughts that occupy so much of my time? Mostly just problems and inconveniences in my life and just sometimes, those of other people.
-                            </span>
-                            <a href="#" onclick="showMore(this); return false;"> more</a>
-                        </p>
-                        <div id="hidden2" class="hidden">
-                            <p>
-                                The ancient Greeks believed that a good citizen was a well-rounded individual.
-                                While I don't live in ancient Greece, I still think it is a good idea,
-                                especially with the recent emphasis on the benefits of cross-disciplinary practices.
-                                I find a simple (perhaps oversimplified) way of thinking about it
-                                is a spectrum ranging from the liberal arts to the sciences.
-                            </p>
-                            <p>
-                                I still haven't said what I do,
-                                maybe you think this is a waste of time,
-                                maybe you should have clicked <a href="/about/">that link</a> that promised less words.
-                                So here it is: I make shiny, glowing rocks do what people want it to do.
-                                Put more plainly, I work with <em>computers</em>,
-                                mostly as a <strong>software <a href="https://github.com/arccy">developer</a></strong> with a preference for using Go,
-                                but I'll use whatever is appropriate for the job (shell scripts, python, C/C++, SQL, javascript, etc..).
-                            </p>
-                            <p>
-                                Somewhere further towards the arts is the <strong>designer</strong> in me. Not just someone who makes things pretty, thats the <em>artist</em>, the designer is someone who asks the right questions before creating the solution. This lends itself to UI/UX, some people might even call this Design Thinking &trade;, but that's just a marketing term for something that good designers should already be doing.
-                            </p>
-                            <p>
-                                The remainder of my time is spent somewhat relaxing the left half of my brain (as if I can turn off my right hand), and channelling my inner Picasso. Okay, maybe not on that level, and maybe not even in painting. I draw, design websites, as a <strong>photographer</strong> I take photos both as a hobby and a job and I've worked as both <strong>lighting and sound technicians</strong> in mid-sized venues.
-                            </p>
-                            <p>
-                                So with all that said, I hope you don't feel that it has been a complete waste of your time and I hope you enjoy the rest of the <a href="/graphs/">site</a>.
-                            </p>
-                            <p>
-                                Interested in working with me?
-                                <ul>
-                                    <li><a href="/cv/">cv</a></li>
-                                    <li><a href="mailto:seanliao96@gmail.com">email</a></li>
-                                </ul>
-                            </p>
-                        </div>
-                        <br>
-                        <div id="tldr">
-                            <strong>tl;dr: </strong>I'm a: Software Developer, Designer, sometimes artist and photographer
-                        </div>
-                        <div id="signature">
-                            <img id="sig" src="signature.png">
-                            <p>Sean Liao</p>
-                        </div>
-
-                    </div>
+        <header class="logo">
+            <a href="/">
+                <div class="logo-up">
+                    Sean
                 </div>
+                <div class="logo-down">
+                    Liao
+                </div>
+            </a>
+        </header>
+        <div class="bg">
+            <img class="bg-image" src="http://via.placeholder.com/800x1000">
+        </div>
+        <main class="wrapper">
+            <div class="offset">
+                <div>
+                    <h2 class="navTitle"><a href="/">home</a></h2>
+                    <span class="navTitle"> &raquo </span>
+                    <h1 class="navTitle">Hello</h1>
+                </div>
+                <h3>You're probably here for <a href="/graphs/">pretty graphs</a> and <a href="/about/">here</a> is this page with less words</h3>
+                <section class="content">
+                    <p>
+                        The following is a quote from George Santayana: <em>"I have imagination, and nothing that is real is alien to me."</em>
+                        <span id="hidden1" class="hidden">
+                            To make that work, I spend a not insignificant portion of my time imagining things. I also spend an even greater part of my time trying to make those dreams a reality. So what are these thoughts that occupy so much of my time? Mostly just problems and inconveniences in my life and just sometimes, those of other people.
+                        </span>
+                        <a href="#" onclick="showMore(this); return false;"> more</a>
+                    </p>
+                    <div id="hidden2" class="hidden">
+                        <p>
+                            The ancient Greeks believed that a good citizen was a well-rounded individual.
+                            While I don't live in ancient Greece, I still think it is a good idea,
+                            especially with the recent emphasis on the benefits of cross-disciplinary practices.
+                            I find a simple (perhaps oversimplified) way of thinking about it
+                            is a spectrum ranging from the liberal arts to the sciences.
+                        </p>
+                        <p>
+                            I still haven't said what I do,
+                            maybe you think this is a waste of time,
+                            maybe you should have clicked <a href="/about/">that link</a> that promised less words.
+                            So here it is: I make shiny, glowing rocks do what people want it to do.
+                            Put more plainly, I work with <em>computers</em>,
+                            mostly as a <strong>software <a href="https://github.com/arccy">developer</a></strong> with a preference for using Go,
+                            but I'll use whatever is appropriate for the job (shell scripts, python, C/C++, SQL, javascript, etc..).
+                        </p>
+                        <p>
+                            Somewhere further towards the arts is the <strong>designer</strong> in me. Not just someone who makes things pretty, thats the <em>artist</em>, the designer is someone who asks the right questions before creating the solution. This lends itself to UI/UX, some people might even call this Design Thinking &trade;, but that's just a marketing term for something that good designers should already be doing.
+                        </p>
+                        <p>
+                            The remainder of my time is spent somewhat relaxing the left half of my brain (as if I can turn off my right hand), and channelling my inner Picasso. Okay, maybe not on that level, and maybe not even in painting. I draw, design websites, as a <strong>photographer</strong> I take photos both as a hobby and a job and I've worked as both <strong>lighting and sound technicians</strong> in mid-sized venues.
+                        </p>
+                        <p>
+                            So with all that said, I hope you don't feel that it has been a complete waste of your time and I hope you enjoy the rest of the <a href="/graphs/">site</a>.
+                        </p>
+                        <p>
+                            Interested in working with me?
+                            <ul>
+                                <li><a href="/cv/">cv</a></li>
+                                <li><a href="mailto:seanliao96@gmail.com">email</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <br>
+                    <div id="tldr">
+                        <strong>tl;dr: </strong>I'm a: Software Developer, Designer, sometimes artist and photographer
+                    </div>
+                    <div id="signature">
+                        <img id="sig" src="signature.png">
+                        <p>Sean Liao</p>
+                    </div>
+                </section>
             </div>
         </main>
         <script>
@@ -132,23 +134,6 @@
 
                 a.remove();
             }
-        </script>
-        <script>
-            /*
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js');
-                });
-            }
-            */
-        </script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-47570930-8', 'auto');
-            ga('send', 'pageview');
         </script>
     </body>
 </html>
