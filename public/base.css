@@ -1,77 +1,67 @@
 :root {
-    /* Polar Night */
-    --nord0: #2E3440;
-    --nord1: #3B4252;
-    --nord2: #434C5E;
-    --nord3: #4C566A;
+    --dark: #282c34;
+    --light: #d6e9ff;
 
-    /* Snow Storn */
-    --nord4: #D8DEE9;
-    --nord5: #E5E9F0;
-    --nord6: #ECEFF4;
+    --pri1: #abb2bf;
+    --pri2: #6e88a6;
+    --pri3: #55606d;
 
-    /* Frost */
-    --nord7: #8FBCBB;
-    --nord8: #88C0D0;
-    --nord9: #81A1C1;
-    --nord10: #5E81AC;
-
-    /* Aurora */
-    --nord11: #BF616A;
-    --nord12: #D08770;
-    --nord13: #EBCB8B;
-    --nord14: #A3BE8C;
-    --nord15: #B48EAD;
+    --sec1: #c8ae9d;
+    --sec2: #e06c75;
+    --sec3: #dd672c;
 
     /* fonts */
-    --title: 'Space Mono', monospace;
-    --body: 'Raleway', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --text: 'Raleway', sans-serif;
 }
 
 /* -==================== Baisic stuff ==================== */
-
 * {
     box-sizing: inherit;
 }
-
 body {
     display: flex;
     font-size: 24px;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: var(--nord0);
-    color: var(--nord5);
+    background-color: var(--dark);
+    color: var(--light);
     font-size: 20px;
     box-sizing: border-box;
     margin: 0;
     padding: 16px;
 }
+h1, h3 {
+    font-family: var(--mono);
+}
+h1, h2, h3, h4 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+a {
+    text-decoration: none;
+    color: var(--sec1);
+}
+a:hover {
+    color: var(--sec2);
+}
 
 .logo {
-    color: var(--nord6);
     width: min-content;
     font-size: 1.5em;
     line-height: 0.9;
     font-family: var(--title);
 }
-
-.logo a {
-    color: inherit;
-}
-.logo-up {
-    transform: translateX(52%);
-}
-.logo-down {
-    transform: rotate(180deg) translateX(52%);
-}
+.logo a {color: inherit;}
+.logo-up {transform: translateX(52%);}
+.logo-down {transform: rotate(180deg) translateX(52%);}
 
 .wrapper {
     width: 96%;
     max-width: 840px;
-    font-family: var(--body);
+    font-family: var(--text);
 }
-
 @media (max-width: 1200px) {
     .wrapper {
         max-width: 660px;
@@ -81,21 +71,10 @@ body {
 .navTitle {
     display: inline-block;
     line-height: 0.3;
-    font-family: var(--title);
-color: var(--nord6)}
+    font-family: var(--mono);
+}
 
 .navTitle a {
     color: inherit;
     text-decoration: underline;
-    color: inherit;
 }
-
-a {
-    text-decoration: none;
-    color: var(--nord8);
-}
-
-a:hover {
-    color: var(--nord9);
-}
-
