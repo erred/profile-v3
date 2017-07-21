@@ -46,7 +46,10 @@ a {
 a:hover {
     color: var(--sec2);
 }
-
+nav {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
 .logo {
     width: min-content;
     font-size: 1.5em;
@@ -59,12 +62,11 @@ a:hover {
 
 .wrapper {
     width: 96%;
-    max-width: 840px;
     font-family: var(--text);
 }
-@media (max-width: 1200px) {
+@media (min-width: 960px) {
     .wrapper {
-        max-width: 660px;
+        max-width: 960px;
     }
 }
 

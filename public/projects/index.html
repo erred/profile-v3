@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/touch-icon-192x192.png">
+    <meta name="theme-color" content="#282c34">
+
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+
+    <title>Projects</title>
+    <link rel="canonical" href="https://arccy.io">
+    <meta itemprop="image" content="https://arccy.io/favicon-192x192.png">
+    <meta name="description" content="this is a description">
+
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src="/sw-register.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="/base.css">
+    <style>
+        article {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 100px 0;
+        }
+        .pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pic { width: 94%; }
+        img { max-width: 100%; max-height: 100%; }
+        @media(min-width: 960px) {
+            article { height: 45vh; justify-content: space-between; }
+            article:nth-child(odd){ flex-direction: row; }
+            article:nth-child(even){ flex-direction: row-reverse; }
+            .pic { width: 45vh; height: 100%; }
+            .desc { width: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="logo">
+        <a href="/">
+            <div class="logo-up">
+                Sean
+            </div>
+            <div class="logo-down">
+                Liao
+            </div>
+        </a>
+    </header>
+    <main class="wrapper">
+        <nav>
+            <h2 class="navTitle"><a href="/">hello</a></h2>
+            <span class="navTitle"> &raquo </span>
+            <h1 class="navTitle">Projects</h1>
+        </nav>
+        <section class="container" >
+            <article>
+                <a class="pic" href="aproject">
+                    <img class="bg-image" src="http://via.placeholder.com/500x500">
+                </a>
+                <a class="desc" href="aproject">
+                    <h3>This is a project</h3>
+                    <p>
+                        This is a project description.
+                        I don't know how long it is
+                        hopefully not too long...
+                    </p>
+                </a>
+            </article>
+            <article>
+                <a class="pic" href="aproject">
+                    <img class="bg-image" src="http://via.placeholder.com/1000x500">
+                </a>
+                <a class="desc" href="aproject">
+                    <h3>This is a project</h3>
+                    <p>
+                        This is a project description.
+                        I don't know how long it is
+                        hopefully not too long...
+                    </p>
+                </a>
+            </article>
+            <article>
+                <a class="pic" href="aproject">
+                    <img class="bg-image" src="http://via.placeholder.com/500x1000">
+                </a>
+                <a class="desc" href="aproject">
+                    <h3>This is a project</h3>
+                    <p>
+                        This is a project description.
+                        I don't know how long it is
+                        hopefully not too long...
+                    </p>
+                </a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
