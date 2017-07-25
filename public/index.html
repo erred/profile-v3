@@ -7,24 +7,32 @@
     <link rel="icon" type="image/png" href="/touch-icon-192x192.png">
     <meta name="theme-color" content="#282c34">
 
-    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
-    <!-- <meta name="mobile-web-app-capable" content="yes"> -->
-
-    <title>Index | Sean Liao</title>
-    <link rel="canonical" href="https://arccy.io/">
+    <title>Sean Liao</title>
+    <link rel="canonical" href="https://arccy.io/letter">
     <meta itemprop="image" content="https://arccy.io/favicon-192x192.png">
-    <meta name="description" content="More than you'd ever want to know about Sean Liao (arccy)">
-
+    <meta name="description" content="Hi, I'm Sean Liao, or arccy, developer & designer willing to do anything fun">
     <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-47570930-8', 'auto');
         ga('send', 'pageview');
     </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <script async src="/sw-register.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Space+Mono|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="/base.css">
+    <style>
+        .bg {position: absolute; right:0; top: 100px; z-index: -1; overflow: hidden; width: 600px; }
+        .bg-image { width: 100%; }
+        .wrapper { max-width: 1080px; }
+        .offset { width: 40%; margin-top: 200px; }
+        @media (max-width: 720px) { .offset { width: 100%; } }
+        .hidden { visibility: hidden; display: none; overflow-y: hidden; }
+        #hidden2 { margin-top: -20px;}
+        #tldr { margin-top: -20px; margin-bottom: 20px;}
+        #sig { width: 50%; }
+        #signature { color: var(--pri2); }
+    </style>
 </head>
 <body>
     <header class="logo">
@@ -37,57 +45,36 @@
             </div>
         </a>
     </header>
+    <!-- <div class="bg"> -->
+    <!--     <img class="bg-image" src="http://via.placeholder.com/800x1000"> -->
+    <!-- </div> -->
     <main class="wrapper">
-        <nav>
-            <h1 class="navTitle">Hello . . .</h1>
-        </nav>
-        <section class="container" >
-            <h2>Maybe you're looking for one of these?</h2>
-            <article>
-                <h3><a href="/projects">Incomplete list</a> of things I've worked on</h3>
+        <div class="offset">
+            <section class="content">
                 <p>
-                    Incomplete because I'm rightly not proud of everything I've done.
+                    <span style="font-family: var(--mono)">Sean Liao</span>
+                    is a student and a
+                    <a href="https://github.com/arccy">software developer</a>
+                    with an interest in network &amp security
+                    He has previously been a photographer, designer,
+                    sound engineer and lighting technician for live events.
                 </p>
-                <h3>Know more <a href="/about">about me</a></h3>
-                <p>
-                    Or....
-                </p>
-            </article>
-            <br>
-            <h2><em>N </em>Questions</h2>
-            <article>
-                <h3>Who are you?</h3>
-                <p>
-                    <a href="/about">Pictures</a>
-                    say a thousand
-                    <a href="/letter">words</a>
-                </p>
-                <p>
-                    A <a href="/cv">cv</a>
-                    says the same in less, with bulletpoints
-                </p>
-                <h3>What do you do?</h3>
-                <p>
-                    <a href="https://github.com/arccy">Things</a> I find fun
-                </p>
-                <h3>Favorite equation?</h3>
-                <p>
-                    responsible
-                    <strong style="font-family: var(--mono);">+</strong>
-                    lazy
-                    <strong style="font-family: var(--mono);">=</strong>
-                    efficient
-                </p>
-                <h3>English?</h3>
-                <p>
-                    Easier than Chinese
-                </p>
-                <h3>Something else?</h3>
-                <p>
-                    Submit an <a href="https://github.com/arccy/arccy.io/issues">issue</a>, or just find another way to ask me
-                </p>
-            </article>
-        </section>
+                <ul>
+                    <li><a href="mailto:seanliao@arccy.io">Email</a></li>
+                    <li><a href="https://github.com/arccy">Github</a></li>
+
+                    <!-- backup email -->
+                    <!-- <li><a href="mailto:seanliao96@gmaul.com">Email</a></li> -->
+                    <!-- not much here -->
+                    <!-- <li><a href="https://www.facebook.com/seanliao96">Facebook</a></li> -->
+                    <!-- potentially NSFW -->
+                    <!-- <li><a href="https://www.instagram.com/seanliao96/">Instagram</a></li> -->
+                    <!-- not very active accounts -->
+                    <!-- <li><a href="https://www.linkedin.com/in/seanliao96/">Linkedin</a></li> -->
+                    <!-- <li><a href="https://twitter.com/seanliao96">Twitter</a></li> -->
+                </ul>
+            </section>
+        </div>
     </main>
 </body>
 </html>
