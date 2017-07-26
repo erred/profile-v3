@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" href="/touch-icon-192x192.png">
@@ -20,8 +20,30 @@
         ga('create', 'UA-47570930-8', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href="/base.css">
+    <!-- <link rel="stylesheet" href="/base.css"> -->
     <style>
+        @font-face{font-family:Raleway;font-style:normal;font-weight:400;src:local('Raleway'),local('Raleway-Regular'),url(https://fonts.gstatic.com/s/raleway/v11/yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:Raleway;font-style:normal;font-weight:400;src:local('Raleway'),local('Raleway-Regular'),url(https://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
+        @font-face{font-family:'Space Mono';font-style:normal;font-weight:400;src:local('Space Mono'),local('SpaceMono-Regular'),url(https://fonts.gstatic.com/s/spacemono/v1/L1KCByOyogPfEIepxkwC2CEAvth_LlrfE80CYdSH47w.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Space Mono';font-style:normal;font-weight:400;src:local('Space Mono'),local('SpaceMono-Regular'),url(https://fonts.gstatic.com/s/spacemono/v1/adVweg3BJhE6r8jYmXseHfk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
+        :root{--dark:#282c34;--light:#d6e9ff;--pri1:#abb2bf;--pri2:#6e88a6;--pri3:#55606d;--sec1:#c8ae9d;--sec2:#e06c75;--sec3:#dd672c;--mono:'Space Mono',monospace;--text:'Raleway',sans-serif}
+        *{box-sizing:inherit}
+        body{display:flex;flex-direction:column;align-items:center;height:100vh;background-color:var(--dark);color:var(--light);font-size:20px;box-sizing:border-box;margin:0;padding:16px}
+        .logo,nav{font-size:1.5em}
+        h1,h3{font-family:var(--mono)}
+        h1,h2,h3,h4{margin-top:2em;margin-bottom:.5em}
+        a{text-decoration:none;color:var(--sec1)}
+        a:hover{color:var(--sec2)}
+        .logo a,.navTitle a{color:inherit}
+        nav{margin-bottom:2em}
+        .logo{width:min-content;line-height:.9;font-family:var(--title)}
+        .logo-up{transform:translateX(52%)}
+        .logo-down{transform:rotate(180deg) translateX(52%)}
+        .wrapper{width:96%;font-family:var(--text)}
+        @media (min-width:960px){.wrapper{max-width:960px}}
+        .navTitle{display:inline-block;line-height:.3;font-family:var(--mono)}
+        .navTitle a{text-decoration:underline}
+
         .bg {position: absolute; right:0; top: 100px; z-index: -1; overflow: hidden; width: 600px; }
         .bg-image { width: 100%; }
         .wrapper { max-width: 1080px; }
